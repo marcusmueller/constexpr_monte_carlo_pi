@@ -23,5 +23,5 @@ constexpr fp_t the_count(unsigned int howmany)
     }
     return static_cast<fp_t>(4 * sum) / howmany;
 }
-  //constexpr auto pi = monte_carlo_pi::the_count(242500);
+constexpr auto pi = monte_carlo_pi::the_count(242500);
 } // namespace monte_carlo_pi
