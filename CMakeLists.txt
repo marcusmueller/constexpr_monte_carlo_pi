@@ -10,3 +10,10 @@ find_package(fmt)
 
 add_executable(monte_carlo_pi monte_carlo_pi.cc)
 target_link_libraries(monte_carlo_pi fmt::fmt)
+
+install(TARGETS monte_carlo_pi
+  RUNTIME
+  DESTINATION ${CMAKE_INSTALL_BINDIR})
+install(FILES monte_carlo_pi.hpp xoroshiro128p.hpp
+  TYPE INCLUDE
+  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
